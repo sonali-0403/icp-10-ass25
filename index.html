@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview</title>
+    <style>
+       body {
+   background-color: azure;
+}
+
+.container {
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+   
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    object-fit: cover;
+    border-radius: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="main.jpg" alt="main image"class="product-image" id="productImage">
+    </div>
+    <div class="img-container">
+        <img src="img1.webp" class="image"alt="image1" onclick="imagechange('img1.webp')">
+        <img src="img2.jpg" class="image"alt="image2"onclick="imagechange('img2.jpg')">
+        <img src="img3.jpg" class="image"alt="image3"onclick="imagechange('img3.jpg')">
+        <img src="img4.jpg" class="image"alt="image4"onclick="imagechange('ima4.jpg')">
+        <img src="img5.jpg" class="image"alt="image5"onclick="imagechange('ima5.jpg')">
+    </div>
+    <script>
+        function imagechange(imageName){
+            const mainimage = document.getElementById("productImage");
+            mainimage.src = imageName
+        }
+    </script>
+</body>
+</html>
